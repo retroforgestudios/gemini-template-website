@@ -72,9 +72,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-full md:w-1/2">
               <img 
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                 alt="Agent talking with clients" 
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl object-cover w-full h-full"
               />
             </div>
             <div className="w-full md:w-1/2">
