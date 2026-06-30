@@ -4,7 +4,6 @@ import QuoteModal from './QuoteModal';
 import ClaimModal from './ClaimModal';
 
 export default function Navbar() {
-  // These create 'switches' we can flip to open and close the modals
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const [isClaimOpen, setIsClaimOpen] = useState(false);
 
@@ -42,27 +41,23 @@ export default function Navbar() {
                     <h3 className="text-lg font-bold text-gray-900 mb-2">Not sure what you need?</h3>
                     <p className="text-sm text-gray-600 mb-4">Our expert agents can help you build a custom policy.</p>
                     
-                    {/* Flipping the quote switch to TRUE */}
                     <button onClick={() => setIsQuoteOpen(true)} className="bg-primary hover:bg-blue-900 text-white font-bold py-2 px-4 rounded transition text-sm shadow-md">Talk to an Agent</button>
                   </div>
                 </div>
               </div>
 
-              {/* Updated Link to point to the new About page */}
               <Link to="/about" className="text-gray-700 hover:text-primary font-semibold transition">About Us</Link>
-              <Link to="/" className="text-gray-700 hover:text-primary font-semibold transition">Contact</Link>
               
-              {/* Flipping the claim switch to TRUE */}
+              {/* This is the fixed link! */}
+              <Link to="/contact" className="text-gray-700 hover:text-primary font-semibold transition">Contact</Link>
+              
               <button onClick={() => setIsClaimOpen(true)} className="border-2 border-primary text-primary px-4 py-2 rounded font-bold hover:bg-primary hover:text-white transition">Report Claim</button>
-              
-              {/* Flipping the quote switch to TRUE */}
               <button onClick={() => setIsQuoteOpen(true)} className="bg-secondary text-white px-5 py-2 rounded font-bold hover:bg-sky-600 transition shadow-lg">Get a Quote</button>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Render the Modals (They only show if the switches are true) */}
       <QuoteModal isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
       <ClaimModal isOpen={isClaimOpen} onClose={() => setIsClaimOpen(false)} />
     </>
