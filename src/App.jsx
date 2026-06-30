@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Life from './pages/Life';
 import Health from './pages/Health';
 import Auto from './pages/Auto';
+import About from './pages/About';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/life" element={<Life />} />
             <Route path="/health" element={<Health />} />
             <Route path="/auto" element={<Auto />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
 

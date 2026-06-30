@@ -48,7 +48,8 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link to="/" className="text-gray-700 hover:text-primary font-semibold transition">About Us</Link>
+              {/* Updated Link to point to the new About page */}
+              <Link to="/about" className="text-gray-700 hover:text-primary font-semibold transition">About Us</Link>
               <Link to="/" className="text-gray-700 hover:text-primary font-semibold transition">Contact</Link>
               
               {/* Flipping the claim switch to TRUE */}
