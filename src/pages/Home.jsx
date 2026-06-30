@@ -21,15 +21,20 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-primary">
+            {/* Service 1 */}
+            <div className="bg-white rounded-lg p-8 border-t-4 border-primary shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
               <h3 className="text-xl font-bold mb-3 text-gray-900">Personal Insurance</h3>
               <p className="text-gray-600 mb-6">Comprehensive coverage for your home, auto, life, and personal assets.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-secondary">
+            
+            {/* Service 2 */}
+            <div className="bg-white rounded-lg p-8 border-t-4 border-secondary shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
               <h3 className="text-xl font-bold mb-3 text-gray-900">Business Insurance</h3>
               <p className="text-gray-600 mb-6">Customized risk management solutions and commercial policies.</p>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-primary">
+            
+            {/* Service 3 */}
+            <div className="bg-white rounded-lg p-8 border-t-4 border-primary shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer">
               <h3 className="text-xl font-bold mb-3 text-gray-900">Employee Benefits</h3>
               <p className="text-gray-600 mb-6">Attract top talent with competitive group health and retirement plans.</p>
             </div>
