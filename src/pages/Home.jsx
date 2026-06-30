@@ -9,7 +9,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Protecting What Matters Most to You.</h1>
           <p className="text-lg md:text-xl mb-10 text-gray-200">Independent insurance solutions tailored to your life, your business, and your employees.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-secondary hover:bg-sky-600 text-white font-bold py-3 px-8 rounded shadow-lg transition text-lg">Get a Free Quote</button>
+            <Link to="/contact" className="bg-secondary hover:bg-sky-600 text-white font-bold py-3 px-8 rounded shadow-lg transition text-lg inline-block">Get a Free Quote</Link>
           </div>
         </div>
       </header>
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-white mb-6">Not sure how much coverage you actually need?</h2>
           <p className="text-blue-100 text-lg mb-8">Stop guessing. Let our experts review your current policies and find gaps before you need to file a claim.</p>
-          <Link to="/about" className="inline-block bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded shadow-lg transition text-lg">
+          <Link to="/contact" className="inline-block bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded shadow-lg transition text-lg">
             Talk to an Expert
           </Link>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section (Now powered by Elfsight!) */}
+      {/* Testimonials Section */}
       <section className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -121,7 +121,6 @@ export default function Home() {
             <p className="text-gray-600 text-lg">Don't just take our word for it. See why families and businesses trust us.</p>
           </div>
           
-          {/* Elfsight Google Reviews Widget */}
           <div className="elfsight-app-22f7b298-0289-4f97-b458-240e4afda5d9" data-elfsight-app-lazy="true"></div>
           
         </div>
