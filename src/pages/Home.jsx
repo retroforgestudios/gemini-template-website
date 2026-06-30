@@ -9,7 +9,6 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Protecting What Matters Most to You.</h1>
           <p className="text-lg md:text-xl mb-10 text-gray-200">Independent insurance solutions tailored to your life, your business, and your employees.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            {/* Note: This button currently just looks good. To wire it to the modal later, we will update the app structure! */}
             <button className="bg-secondary hover:bg-sky-600 text-white font-bold py-3 px-8 rounded shadow-lg transition text-lg">Get a Free Quote</button>
           </div>
         </div>
@@ -20,7 +19,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Trusted by Top Carriers</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition duration-500">
-            {/* Placeholder Logos - In reality, you'd replace these with actual img tags */}
             <div className="text-xl font-bold text-gray-800 flex items-center gap-2"><i className="fa-solid fa-umbrella"></i> Traveler's</div>
             <div className="text-xl font-bold text-gray-800 flex items-center gap-2"><i className="fa-solid fa-car-side"></i> Progressive</div>
             <div className="text-xl font-bold text-gray-800 flex items-center gap-2"><i className="fa-solid fa-building-shield"></i> State Auto</div>
@@ -115,7 +113,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section (Now powered by Elfsight!) */}
       <section className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -123,34 +121,9 @@ export default function Home() {
             <p className="text-gray-600 text-lg">Don't just take our word for it. See why families and businesses trust us.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 relative">
-              <i className="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-4 right-4"></i>
-              <div className="text-yellow-400 mb-4 text-sm">
-                <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-              </div>
-              <p className="text-gray-700 italic mb-6">"They saved me over $400 a year on my auto policy and actually explained what my coverages meant. I'll never go anywhere else!"</p>
-              <p className="font-bold text-gray-900">- Sarah T.</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 relative">
-              <i className="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-4 right-4"></i>
-              <div className="text-yellow-400 mb-4 text-sm">
-                <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-              </div>
-              <p className="text-gray-700 italic mb-6">"When a tree hit our roof, they were the first ones we called. The claims process was incredibly smooth, and they held our hand the whole time."</p>
-              <p className="font-bold text-gray-900">- Mark & Jessica L.</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100 relative">
-              <i className="fa-solid fa-quote-left text-4xl text-gray-200 absolute top-4 right-4"></i>
-              <div className="text-yellow-400 mb-4 text-sm">
-                <i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i><i className="fa-solid fa-star"></i>
-              </div>
-              <p className="text-gray-700 italic mb-6">"Managing insurance for 50 employees used to be a nightmare. AgencyName streamlined our entire benefits package seamlessly."</p>
-              <p className="font-bold text-gray-900">- David W., Tech Solutions Inc.</p>
-            </div>
-          </div>
+          {/* Elfsight Google Reviews Widget */}
+          <div className="elfsight-app-22f7b298-0289-4f97-b458-240e4afda5d9" data-elfsight-app-lazy="true"></div>
+          
         </div>
       </section>
 
