@@ -1,49 +1,89 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import QuoteModal from './QuoteModal'; // Importing the modal
+
 export default function Footer() {
+  // The switch to open and close the quote modal
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
+
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12 mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="col-span-1 md:col-span-1">
-          <a href="#" className="flex items-center gap-2 mb-4">
-            <i className="fa-solid fa-shield-halved text-secondary text-3xl"></i>
-            <span className="font-bold text-2xl text-white">Agency<span className="text-secondary">Name</span></span>
-          </a>
-          <p className="text-sm mb-4">Providing innovative insurance solutions and exceptional service to our community since 1970.</p>
-        </div>
-        
-        <div>
-          <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-secondary transition">Life Insurance</a></li>
-            <li><a href="#" className="hover:text-secondary transition">Health Insurance</a></li>
-            <li><a href="#" className="hover:text-secondary transition">Auto Insurance</a></li>
-            <li><a href="#" className="hover:text-secondary transition">Home Insurance</a></li>
-          </ul>
-        </div>
+    <>
+      <footer className="bg-primary text-white pt-16 pb-8 border-t-4 border-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            
+            {/* Brand Column */}
+            <div>
+              <Link to="/" className="flex items-center gap-2 mb-6">
+                <i className="fa-solid fa-shield-halved text-secondary text-3xl"></i>
+                <span className="font-bold text-2xl text-white">Agency<span className="text-secondary">Name</span></span>
+              </Link>
+              <p className="text-blue-200 text-sm leading-relaxed mb-6">
+                Protecting what matters most to you with tailored insurance solutions and neighborly care since 1970.
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-blue-200 hover:text-white transition"><i className="fa-brands fa-facebook text-xl"></i></a>
+                <a href="#" className="text-blue-200 hover:text-white transition"><i className="fa-brands fa-twitter text-xl"></i></a>
+                <a href="#" className="text-blue-200 hover:text-white transition"><i className="fa-brands fa-linkedin text-xl"></i></a>
+              </div>
+            </div>
 
-        <div>
-          <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact Us</h4>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-start gap-3">
-              <i className="fa-solid fa-location-dot mt-1 text-secondary"></i>
-              <span>1234 Main Street, Suite 100<br/>Omaha, NE 68102</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <i className="fa-solid fa-phone text-secondary"></i>
-              <span>(555) 123-4567</span>
-            </li>
-          </ul>
-        </div>
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-bold mb-6 border-b border-blue-800 pb-2">Quick Links</h3>
+              <ul className="space-y-3">
+                <li><Link to="/" className="text-blue-200 hover:text-white transition flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-secondary"></i> Home</Link></li>
+                <li><Link to="/about" className="text-blue-200 hover:text-white transition flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-secondary"></i> About Us</Link></li>
+                <li><Link to="/contact" className="text-blue-200 hover:text-white transition flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-secondary"></i> Contact</Link></li>
+              </ul>
+            </div>
 
-        <div>
-          <h4 className="text-white font-bold mb-4 uppercase text-sm tracking-wider">Get In Touch</h4>
-          <p className="text-sm mb-4">Need a quick quote? Reach out to our agents directly.</p>
-          <button className="block text-center bg-secondary hover:bg-sky-600 text-white font-bold py-2 px-4 rounded transition w-full">Request a Quote</button>
+            {/* Products */}
+            <div>
+              <h3 className="text-lg font-bold mb-6 border-b border-blue-800 pb-2">Our Products</h3>
+              <ul className="space-y-3">
+                <li><Link to="/auto" className="text-blue-200 hover:text-white transition flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-secondary"></i> Auto Insurance</Link></li>
+                <li><Link to="/life" className="text-blue-200 hover:text-white transition flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-secondary"></i> Life Insurance</Link></li>
+                <li><Link to="/health" className="text-blue-200 hover:text-white transition flex items-center gap-2"><i className="fa-solid fa-angle-right text-xs text-secondary"></i> Health Insurance</Link></li>
+              </ul>
+            </div>
+
+            {/* Contact Info & Call to Action */}
+            <div>
+              <h3 className="text-lg font-bold mb-6 border-b border-blue-800 pb-2">Contact Us</h3>
+              <ul className="space-y-4 mb-6">
+                <li className="flex items-start gap-3 text-blue-200">
+                  <i className="fa-solid fa-location-dot mt-1 text-secondary"></i>
+                  <span>123 Insurance Blvd, Suite 100<br />Anytown, ST 12345</span>
+                </li>
+                <li className="flex items-center gap-3 text-blue-200">
+                  <i className="fa-solid fa-phone text-secondary"></i>
+                  <span>(555) 123-4567</span>
+                </li>
+              </ul>
+              {/* This button flips the modal switch to TRUE */}
+              <button 
+                onClick={() => setIsQuoteOpen(true)} 
+                className="w-full bg-secondary hover:bg-sky-600 text-white font-bold py-3 px-4 rounded transition shadow-lg flex justify-center items-center gap-2"
+              >
+                Request a Quote <i className="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          {/* Copyright Area */}
+          <div className="border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center text-blue-300 text-sm">
+            <p>&copy; {new Date().getFullYear()} AgencyName Insurance. All rights reserved.</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <Link to="/" className="hover:text-white transition">Privacy Policy</Link>
+              <Link to="/" className="hover:text-white transition">Terms of Service</Link>
+            </div>
+          </div>
         </div>
-      </div>
+      </footer>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center flex justify-between items-center">
-        <p>&copy; 2026 AgencyName Insurance. All Rights Reserved.</p>
-      </div>
-    </footer>
+      {/* Render the Modal (Only shows if the switch is true) */}
+      <QuoteModal isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
+    </>
   );
 }
