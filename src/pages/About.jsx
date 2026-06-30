@@ -82,10 +82,10 @@ export default function About() {
           <h2 className="text-3xl font-bold text-white mb-4">Ready to work with a team that cares?</h2>
           <p className="text-blue-200 mb-8 text-lg">Let us review your current coverage and find the perfect plan for your unique needs.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-secondary hover:bg-sky-600 text-white font-bold py-3 px-8 rounded shadow-lg transition text-lg">
+            <Link to="/contact" className="bg-secondary hover:bg-sky-600 text-white font-bold py-3 px-8 rounded shadow-lg transition text-lg inline-block text-center">
               Get a Free Quote
-            </button>
-            <Link to="/" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded transition text-lg">
+            </Link>
+            <Link to="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded transition text-lg">
               Contact Us
             </Link>
           </div>
